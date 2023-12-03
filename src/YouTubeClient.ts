@@ -27,19 +27,19 @@ export class YouTubeClient {
 	}
 
 	video(searchParams: SearchParams$Video): Promise<Schema$Video> {
-		return this.httpClient.post("/video", { json: searchParams })
+		return this.httpClient.post("/video", searchParams)
 	}
 
 	game(searchParams: SearchParams$Game): Promise<Schema$Game> {
-		return this.httpClient.post("/game", { json: searchParams })
+		return this.httpClient.post("/game", searchParams)
 	}
 
 	gaming(searchParams: SearchParams$Gaming): Promise<Schema$Gaming> {
-		return this.httpClient.post("/gaming", { json: searchParams })
+		return this.httpClient.post("/gaming", searchParams)
 	}
 
 	gameTitle(searchParams: SearchParams$GameTitle): Promise<Schema$GameTitle> {
-		return this.httpClient.post("/gametitle", { json: searchParams })
+		return this.httpClient.post("/gametitle", searchParams)
 	}
 
 }
