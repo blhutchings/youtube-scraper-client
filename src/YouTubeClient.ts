@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { Schema$Game, SearchParams$Game } from "./types/Game.js";
 import { SearchParams$Video, Schema$Video } from "./types/Video.js";
 import { SearchParams$Gaming, Schema$Gaming } from "./types/Gaming.js";
@@ -26,19 +26,19 @@ export class YouTubeClient {
 		})
 	}
 
-	video(searchParams: SearchParams$Video): Promise<Schema$Video> {
+	video(searchParams: SearchParams$Video): Promise<AxiosResponse<Schema$Video>> {
 		return this.httpClient.post("/video", searchParams)
 	}
 
-	game(searchParams: SearchParams$Game): Promise<Schema$Game> {
+	game(searchParams: SearchParams$Game): Promise<AxiosResponse<Schema$Game>> {
 		return this.httpClient.post("/game", searchParams)
 	}
 
-	gaming(searchParams: SearchParams$Gaming): Promise<Schema$Gaming> {
+	gaming(searchParams: SearchParams$Gaming): Promise<AxiosResponse<Schema$Gaming>> {
 		return this.httpClient.post("/gaming", searchParams)
 	}
 
-	gameTitle(searchParams: SearchParams$GameTitle): Promise<Schema$GameTitle> {
+	gameTitle(searchParams: SearchParams$GameTitle): Promise<AxiosResponse<Schema$GameTitle>> {
 		return this.httpClient.post("/gametitle", searchParams)
 	}
 
