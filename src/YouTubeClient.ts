@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosResponse, CreateAxiosDefaults } from "axios";
+import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { Schema$Game, SearchParams$Game } from "./types/Game.js";
 import { SearchParams$Video, Schema$Video } from "./types/Video.js";
 import { SearchParams$Gaming, Schema$Gaming } from "./types/Gaming.js";
@@ -14,7 +14,7 @@ export interface YouTubeClientOptions {
 
 export class YouTubeClient {
 	private httpClient: AxiosInstance
-	private options: YouTubeClientOptions ;
+	private options: YouTubeClientOptions;
 
 	constructor(options?: YouTubeClientOptions) {
 		this.options = {
