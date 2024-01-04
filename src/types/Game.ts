@@ -1,3 +1,4 @@
+import { Schema$GameCard } from "./components/GameCard.js";
 import { Schema$RichItemRenderer } from "./components/RichItemRenderer.js";
 
 export type SearchParams$Game = {
@@ -47,10 +48,4 @@ export interface Schema$GameAbout {
 		url?: string;
 	}[]
 }
-export interface Schema$GameCard {
-	title?: string;
-	channelId?: string;
-	boxArt?: string;
-	liveViewersText?: string;
-	isOfficialBoxArt?: boolean;
-}
+

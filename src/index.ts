@@ -3,6 +3,7 @@ export { Schema$CompactRendererMovie } from "./types/components/CompactRendererM
 export { Schema$CompactRendererPlaylist } from "./types/components/CompactRendererPlaylist.js"
 export { Schema$CompactRendererVideo } from "./types/components/CompactRendererVideo.js"
 export { Schema$RichItemRenderer } from "./types/components/RichItemRenderer.js"
+export { Schema$GameCard } from "./types/components/GameCard.js"
 
 export { Schema$Thumbnail, Schema$ThumbnailDetails } from "./types/Thumbnail.js"
 
@@ -22,12 +23,10 @@ export {
 	Schema$GameRecent,
 	Schema$GameOfficial,
 	Schema$GameAbout,
-	Schema$GameCard
 } from "./types/Game.js"
 
 export {
 	SearchParams$Gaming, Schema$Gaming,
-	Schema$GamingSnippet,
 	Schema$GamingLive,
 	Schema$GamingTrending
 } from "./types/Gaming.js"
