@@ -3,7 +3,7 @@ import { Schema$Game, SearchParams$Game } from "./types/Game.js";
 import { SearchParams$Video, Schema$Video } from "./types/Video.js";
 import { SearchParams$Gaming, Schema$Gaming } from "./types/Gaming.js";
 import { SearchParams$GameTitle, Schema$GameTitle } from "./types/GameTitle.js";
-
+import http from "http";
 
 export interface YouTubeClientOptions {
 	host: string,
@@ -26,7 +26,8 @@ export class YouTubeClient {
 
 		this.httpClient = axios.create({
 			baseURL: `http${this.options.https ? 's' : ''}://${this.options.host}:${this.options.port}/`,
-			timeout: this.options.timeout
+			timeout: this.options.timeout,
+			httpAgent: new http.Agent({ keepAlive: true }),
 		})
 	}
 
