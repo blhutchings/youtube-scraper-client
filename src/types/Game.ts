@@ -3,7 +3,8 @@ import { Schema$RichItemRenderer } from "./components/RichItemRenderer.js";
 
 export type SearchParams$Game = {
 	browseId: string,
-	tab: "home" | "live" | "recent" | "official" | "about"
+	tab: "home" | "live" | "recent" | "official" | "about",
+	continuation?: string
 }
 
 export interface Schema$Game {
@@ -29,7 +30,7 @@ export interface Schema$GameHome {
 }
 export interface Schema$GameLive {
 	results?: Schema$RichItemRenderer[];
-	continue?: string
+	continuation?: string
 }
 export interface Schema$GameRecent {
 	results?: Schema$RichItemRenderer[];
